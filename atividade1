@@ -20,11 +20,11 @@ int main(){
         maior = num;
         menor = num;
     }else{
-    if (num < menor)
-        menor = num;
+    if (num < menor){
+        menor = num;}
     
-    if (num > maior)
-        maior = num;
+    if (num > maior){
+        maior = num;}
         
     }
 
