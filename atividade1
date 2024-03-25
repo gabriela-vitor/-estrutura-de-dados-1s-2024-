@@ -1,1 +1,62 @@
+#include <stdio.h>
 
+
+int main(){
+
+    int quant, soma = 0;
+    int num, menor, maior;
+    float media;
+    
+    printf("Digite a quantidade de numeros a serem inseridos: ");
+    scanf("%d", &quant);
+    
+    if(quant <= 0){
+        printf("ERRO");
+        return 1;
+    }
+   
+    printf("Digite %d numeros:", quant);
+    scanf("%d", &num);
+    soma += num;
+    menor = num;
+    maior = num;
+
+
+   for(int i = 1; i < quant; i++){
+        scanf("%d", &num);
+        soma+=num;
+       
+
+        if (num < menor){
+        menor = num;
+    }
+    
+    if (num > maior){
+        maior = num;
+        }
+    }
+
+    media = soma / quant;
+
+    
+
+    printf("Quantidade de  numeros: %d\n", quant);
+    printf("A media dos numeros e: %.2f\n", media);
+    printf("Menor numero: %d\n", menor);
+    printf("Maior numero: %d\n", maior);
+
+    printf("Numeros em ordem crescente:" );
+    for(int i = menor; i <= maior; i++){
+
+        printf("%d ", i);
+        
+            
+        }
+       
+    
+    
+    printf("\n");
+    
+    
+    return 0;
+}
