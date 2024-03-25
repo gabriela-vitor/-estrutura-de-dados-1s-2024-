@@ -3,37 +3,33 @@
 
 int main(){
 
-    int quant, soma = 0;
+    int quant = 0, soma = 0;
     int num, menor, maior;
     float media;
-    
-    printf("Digite a quantidade de numeros a serem inseridos: ");
-    scanf("%d", &quant);
-    
-    if(quant <= 0){
-        printf("ERRO");
-        return 1;
-    }
    
-    printf("Digite %d numeros:", quant);
-    scanf("%d", &num);
-    soma += num;
-    menor = num;
-    maior = num;
-
-
-   for(int i = 1; i < quant; i++){
-        scanf("%d", &num);
-        soma+=num;
-       
-
-        if (num < menor){
-        menor = num;
-    }
+    printf("Digite os numeros (digite -1 para parar):");
     
-    if (num > maior){
+    while(-1){
+        scanf("%d", &num);
+        
+    if(num == -1)
+    break;
+    quant++;
+        
+    if(quant == 1){
         maior = num;
-        }
+        menor = num;
+    }else{
+    if (num < menor)
+        menor = num;
+    
+    if (num > maior)
+        maior = num;
+        
+    }
+
+    soma+=num;
+    
     }
 
     media = soma / quant;
