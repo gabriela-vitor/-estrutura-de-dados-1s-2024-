@@ -33,8 +33,13 @@ int main(int argc, char* argv[]){
     
 
     printf("\n qtd = %d", quantidade_nos(H));
-    printf("\n copia qtd = %d", quantidade_nos(Hc));
 
+    printf("\n E existe na lista? %d", verificar_existencia(H, 'E'));
+    printf("\n E ocorre qnts vezes na lista? %d\n", verificar_ocorrencias(H, 'E'));
+
+    imprimir_inversa(H);
+
+    
    
     exit(0);
 }
