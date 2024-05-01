@@ -75,4 +75,6 @@ int main(int argc, char *argv[]){
 
     printf("y = %.1fx + %.f\n", inclinacao, intercepcao);
 
+    return 0;
+
 }
